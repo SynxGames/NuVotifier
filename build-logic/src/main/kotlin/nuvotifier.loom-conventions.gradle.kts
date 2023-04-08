@@ -27,4 +27,5 @@ dependencies {
     }
 
     include("org.yaml:snakeyaml:1.27") // Configurate
+    include("io.leangen.geantyref:geantyref:1.3.11") // Configurate
 }
