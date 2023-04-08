@@ -1,7 +1,7 @@
-import org.ajoberstar.grgit.Grgit
-
 plugins {
-    id("net.kyori.blossom") version "1.2.0" apply false
+    id("nuvotifier.base-conventions")
+    //id("net.kyori.blossom") version "1.2.0" apply false
+    //id("fabric-loom") version "1.1-SNAPSHOT" apply false // Fabric Workaround
 }
 
 logger.lifecycle("""
@@ -17,15 +17,4 @@ logger.lifecycle("""
 """)
 
 
-applyRootArtifactoryConfig()
-
-if (!project.hasProperty("gitCommitHash")) {
-    apply(plugin = "org.ajoberstar.grgit")
-    ext["gitCommitHash"] = try {
-        Grgit.open(mapOf("currentDir" to project.rootDir))?.head()?.abbreviatedId
-    } catch (e: Exception) {
-        logger.warn("Error getting commit hash", e)
-
-        "no.git.id"
-    }
-}
+//applyRootArtifactoryConfig()

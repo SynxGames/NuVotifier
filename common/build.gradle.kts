@@ -1,9 +1,10 @@
 plugins {
     `java-library`
+    id("nuvotifier.base-conventions")
 }
 
-applyPlatformAndCoreConfiguration()
-applyCommonArtifactoryConfig()
+//applyPlatformAndCoreConfiguration()
+//applyCommonArtifactoryConfig()
 
 dependencies {
     "api"(project(":nuvotifier-api"))

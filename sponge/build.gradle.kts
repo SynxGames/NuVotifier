@@ -17,7 +17,7 @@ blossom {
 }
 
 sponge {
-    apiVersion("7.2.0")
+    apiVersion("7.4.0")
     loader {
         name(PluginLoaders.JAVA_PLAIN)
         version("1.0")
@@ -39,7 +39,7 @@ sponge {
         dependency("spongeapi") {
             loadOrder(PluginDependency.LoadOrder.AFTER)
             optional(false)
-            version("7.2.0")
+            version("7.4.0")
         }
     }
 }
@@ -56,7 +56,7 @@ configurations {
 }
 
 dependencies {
-    compileOnly("org.spongepowered:spongeapi:7.2.0")
+    compileOnly("org.spongepowered:spongeapi:7.4.0")
 
     "api"(project(":nuvotifier-api"))
     "api"(project(":nuvotifier-common"))
