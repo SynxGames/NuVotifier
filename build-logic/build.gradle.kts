@@ -15,7 +15,7 @@ repositories {
 dependencies {
 
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
-    implementation("quiet-fabric-loom:quiet-fabric-loom.gradle.plugin:1.0-SNAPSHOT")
+    implementation("quiet-fabric-loom:quiet-fabric-loom.gradle.plugin:1.1-SNAPSHOT")
 
     /**
     implementation("org.ajoberstar.grgit:grgit-gradle:4.1.1")

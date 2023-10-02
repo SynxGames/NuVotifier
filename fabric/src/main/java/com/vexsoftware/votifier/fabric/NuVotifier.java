@@ -27,17 +27,14 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.MinecraftServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.nio.file.Path;
 import java.security.Key;
 import java.security.KeyPair;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Predicate;
 
 public class NuVotifier implements ModInitializer, VoteHandler, VotifierPlugin, ForwardedVoteListener {
 
@@ -115,6 +112,10 @@ public class NuVotifier implements ModInitializer, VoteHandler, VotifierPlugin, 
                                     })
                             )
             );
+
+        });
+
+        VotifierEvent.EVENT.register(vote -> {
 
         });
 
